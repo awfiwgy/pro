@@ -1,0 +1,16 @@
+#订阅名
+地址(支持m3u订阅、tvbox配置文件中live选项的直播地址订阅)
+
+相对路径说明
+以./开头，相对位置是本订阅文件
+以/开头，存储卡的根目录
+#电影三万部
+/TVS/电影3万部.txt
+#自动更新
+https://down.nigx.cn/raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u
+#九州影视
+https://tc.z.wiki/autoupload/3QDPw4-gAd37T2i9HoBz1zZ2Dc6aMs5JrhEnW6BcRD2yl5f0KlZfm6UsKj-HyTuv/20250612/yTbY/九州影视.txt
+#所有频道
+http://adultiptv.net/All.m3u
+#全球直播
+http://adultiptv.net/videos.m3u8
