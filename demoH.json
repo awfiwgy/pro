@@ -516,6 +516,17 @@
         "ext": {}
     },
     {
+        "key": "http://caiji.dyttzyapi.com",
+        "name": "🎥电影天堂｜采集",
+        "type": 1,
+        "api": "http://caiji.dyttzyapi.com/api.php/provide/vod",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
         "key": "爱看机器人",
         "name": "👖爱看机器人",
         "type": 3,
