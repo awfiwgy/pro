@@ -516,6 +516,19 @@
         "ext": {}
     },
     {
+        "key": "hipy_js_路漫漫",
+        "name": "🔥路漫漫｜秒播",
+        "type": 3,
+        "api": "./js/drpy2.min.js",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "order_num": 0,
+        "ext": "./js/路漫漫.js"
+    },
+    {
         "key": "http://caiji.dyttzyapi.com",
         "name": "🎥电影天堂｜采集",
         "type": 0,
