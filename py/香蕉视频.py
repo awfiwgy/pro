@@ -10,6 +10,8 @@ import re
 import requests
 from lxml import etree
 from urllib.parse import urljoin
+import base64
+import hashlib
 
 class Spider(Spider):
     
@@ -28,7 +30,7 @@ class Spider(Spider):
             'Referer': self.host
         }
         # 定义特殊分区ID列表，包含所有需要特殊处理的分类
-        self.special_categories = ['13', '14', '33',  '53', '32', '52', '9']
+        self.special_categories = ['13', '14', '33', '53', '32', '52', '9', '40', '44']
         self.log(f"苹果视频爬虫初始化完成，主站: {self.host}")
 
     def html(self, content):
@@ -77,7 +79,9 @@ class Spider(Spider):
             {'type_id': '618041.xyz_53', 'type_name': '动漫中字'},
             {'type_id': '618041.xyz_52', 'type_name': '日本无码'},
             {'type_id': '618041.xyz_33', 'type_name': '中文字幕'},
-            {'type_id': '618041.xyz_32', 'type_name': '国产自拍'}
+            {'type_id': '618041.xyz_32', 'type_name': '国产自拍'},
+            {'type_id': '618041.xyz_40', 'type_name': '精品专区'},
+            {'type_id': '618041.xyz_44', 'type_name': '国产大奶'}
         ]
         result['class'] = classes
         try:
@@ -111,7 +115,9 @@ class Spider(Spider):
                 {'type_id': '618041.xyz_53', 'type_name': '动漫中字'},
                 {'type_id': '618041.xyz_52', 'type_name': '日本无码'},
                 {'type_id': '618041.xyz_33', 'type_name': '中文字幕'},
-                {'type_id': '618041.xyz_32', 'type_name': '国产自拍'}
+                {'type_id': '618041.xyz_32', 'type_name': '国产自拍'},
+                {'type_id': '618041.xyz_40', 'type_name': '精品专区'},
+                {'type_id': '618041.xyz_44', 'type_name': '国产大奶'}
             ]
         }
 
@@ -125,12 +131,25 @@ class Spider(Spider):
             self.log(f"访问分类URL: {url}")
             rsp = self.fetch(url, headers=self.headers)
             doc = self.html(rsp.text)
-            # 在这里将 type_id 传递给 _get_videos 方法
             videos = self._get_videos(doc, category_id=type_id, limit=20)
             
-            # 使用固定页数设置，而不是尝试从页面解析
-            pagecount = 999
-            total = 19980
+            # 尝试从分页元素中获取页数
+            pagecount = 50  # 默认值
+            try:
+                page_elements = doc.xpath('//div[@class="mypage"]/a')
+                if page_elements:
+                    # 查找尾页链接
+                    for elem in page_elements:
+                        if '尾页' in elem.text or '最后一页' in elem.text:
+                            href = elem.xpath('./@href')[0]
+                            match = re.search(r'/page/(\d+)\.html', href)
+                            if match:
+                                pagecount = int(match.group(1))
+                                break
+            except:
+                pass
+            
+            total = pagecount * 20
             
             return {
                 'list': videos,
@@ -165,30 +184,23 @@ class Spider(Spider):
             # 提取搜索结果
             videos = self._get_videos(doc, limit=20)
             
-            # 尝试从页面提取分页信息
+            # 尝试从分页元素中获取页数
             pagecount = 5  # 默认值
-            total = 100    # 默认值
-            
-            # 尝试从分页元素中提取真实的分页信息
-            page_elements = doc.xpath('//div[@class="mypage"]/a')
-            if page_elements and len(page_elements) > 0:
-                try:
+            try:
+                page_elements = doc.xpath('//div[@class="mypage"]/a')
+                if page_elements:
                     # 查找尾页链接
-                    last_page = None
                     for elem in page_elements:
-                        href = elem.xpath('./@href')[0]
-                        if '尾页' in elem.text or 'page/' in href:
-                            last_page = href
-                            break
-                    
-                    if last_page:
-                        # 从尾页URL中提取页码
-                        page_match = re.search(r'/page/(\d+)\.html', last_page)
-                        if page_match:
-                            pagecount = int(page_match.group(1))
-                            total = pagecount * 20  # 估算总数
-                except:
-                    pass
+                        if '尾页' in elem.text or '最后一页' in elem.text:
+                            href = elem.xpath('./@href')[0]
+                            match = re.search(r'/page/(\d+)\.html', href)
+                            if match:
+                                pagecount = int(match.group(1))
+                                break
+            except:
+                pass
+            
+            total = pagecount * 20
             
             return {
                 'list': videos,
@@ -223,10 +235,14 @@ class Spider(Spider):
                     query_params = urllib.parse.parse_qs(parsed_url.query)
                     video_url = query_params.get('v', [''])[0]
                     pic_url = query_params.get('b', [''])[0]
-                    title_encrypted = query_params.get('m', [''])[0]
                     
-                    # 解码标题
-                    title = self._decrypt_title(title_encrypted)
+                    # 从链接中提取标题（加密的）
+                    path_parts = parsed_url.path.split('/')
+                    if len(path_parts) > 0:
+                        encrypted_title = path_parts[-1].replace('.html', '')
+                        title = self._decrypt_title(encrypted_title)
+                    else:
+                        title = "未知标题"
                     
                     return {
                         'list': [{
@@ -235,6 +251,10 @@ class Spider(Spider):
                             'vod_pic': pic_url,
                             'vod_remarks': '',
                             'vod_year': '',
+                            'vod_area': '',
+                            'vod_actor': '',
+                            'vod_director': '',
+                            'vod_content': '',
                             'vod_play_from': '直接播放',
                             'vod_play_url': f"第1集${play_url}"
                         }]
@@ -267,8 +287,6 @@ class Spider(Spider):
                 # 解析特殊分区ID格式: special_{category_id}_{video_id}_{encoded_url}
                 parts = id.split('_')
                 if len(parts) >= 4:
-                    category_id = parts[1]
-                    video_id = parts[2]
                     encoded_url = '_'.join(parts[3:])
                     play_url = urllib.parse.unquote(encoded_url)
                     
@@ -288,6 +306,9 @@ class Spider(Spider):
                         
                         self.log(f"从特殊链接中提取到视频地址: {video_url}")
                         return {'parse': 0, 'playUrl': '', 'url': video_url}
+                    else:
+                        self.log(f"未找到视频参数，返回原始链接")
+                        return {'parse': 1, 'playUrl': '', 'url': play_url}
             
             # 检查传入的ID是否为完整URL，如果是则直接解析
             if id.startswith('http'):
@@ -297,13 +318,6 @@ class Spider(Spider):
                 
                 # 尝试获取视频参数
                 video_url = query_params.get('v', [''])[0]
-                if not video_url:
-                    # 尝试其他可能的参数名
-                    for key in query_params:
-                        if key in ['url', 'src', 'file']:
-                            video_url = query_params[key][0]
-                            break
-                
                 if video_url:
                     # 解码可能的URL编码
                     video_url = urllib.parse.unquote(video_url)
@@ -317,16 +331,7 @@ class Spider(Spider):
                     self.log(f"从 URL 参数中提取到视频地址: {video_url}")
                     return {'parse': 0, 'playUrl': '', 'url': video_url}
                 else:
-                    self.log("URL 中没有找到视频参数，尝试从页面提取")
-                    # 请求页面并提取视频链接
-                    rsp = self.fetch(id, headers=self.headers)
-                    if rsp and rsp.status_code == 200:
-                        video_url = self._extract_direct_video_url(rsp.text)
-                        if video_url:
-                            self.log(f"从页面提取到视频地址: {video_url}")
-                            return {'parse': 0, 'playUrl': '', 'url': video_url}
-                    
-                    self.log("无法从页面提取视频链接，返回原始URL")
+                    self.log("URL 中没有找到视频参数，返回原始URL")
                     return {'parse': 1, 'playUrl': '', 'url': id}
 
             # 从新的 id 格式中提取视频ID和分类ID
@@ -473,29 +478,69 @@ class Spider(Spider):
                 link = self.host + link
             
             # 检查是否是特殊分区的链接
-            is_special_link = 'ar-kk.html' in link or 'ar.html' in link
+            is_special_link = '/html/dcdc/' in link
             
             # 对于特殊分区，直接使用链接本身作为ID
-            if is_special_link and category_id in self.special_categories:
+            if is_special_link:
                 # 提取链接中的参数
                 parsed_url = urllib.parse.urlparse(link)
                 query_params = urllib.parse.parse_qs(parsed_url.query)
                 
-                # 获取视频ID（从v参数中提取）
+                # 获取视频URL和封面URL
                 video_url = query_params.get('v', [''])[0]
+                pic_url = query_params.get('b', [''])[0]
+                
                 if video_url:
                     # 从视频URL中提取ID
                     video_id_match = re.search(r'/([a-f0-9-]+)/video\.m3u8', video_url)
                     if video_id_match:
                         video_id = video_id_match.group(1)
                     else:
-                        # 如果没有匹配到，使用哈希值
-                        video_id = str(hash(link) % 1000000)
+                        # 如果没有匹配到，使用MD5哈希值
+                        video_id = hashlib.md5(video_url.encode()).hexdigest()[:8]
                 else:
                     video_id = str(hash(link) % 1000000)
                 
                 # 对于特殊分区，保留完整的链接作为vod_id的一部分
-                final_vod_id = f"special_{category_id}_{video_id}_{urllib.parse.quote(link)}"
+                encoded_link = urllib.parse.quote(link)
+                final_vod_id = f"special_{category_id}_{video_id}_{encoded_link}"
+                
+                # 提取加密的标题并解密
+                title_elem = element.xpath('.//p[@class="km-script"]/text()')
+                if not title_elem:
+                    title_elem = element.xpath('.//p[contains(@class, "script")]/text()')
+                    if not title_elem:
+                        title_elem = element.xpath('.//p/text()')
+                        if not title_elem:
+                            title_elem = element.xpath('.//h3/text()')
+                            if not title_elem:
+                                title_elem = element.xpath('.//h4/text()')
+                                if not title_elem:
+                                    self.log(f"未找到标题元素，跳过该视频")
+                                    return None
+                
+                title_encrypted = title_elem[0].strip()
+                title = self._decrypt_title(title_encrypted)
+                
+                # 提取图片
+                pic_elem = element.xpath('.//img/@data-original')
+                if not pic_elem:
+                    pic_elem = element.xpath('.//img/@src')
+                pic = pic_elem[0] if pic_elem else pic_url
+                
+                if pic:
+                    if pic.startswith('//'):
+                        pic = 'https:' + pic
+                    elif pic.startswith('/'):
+                        pic = self.host + pic
+                
+                return {
+                    'vod_id': final_vod_id,
+                    'vod_name': title,
+                    'vod_pic': pic,
+                    'vod_remarks': '',
+                    'vod_year': ''
+                }
             else:
                 # 常规处理
                 vod_id = self.regStr(r'm=(\d+)', link)
@@ -505,49 +550,49 @@ class Spider(Spider):
                 final_vod_id = f"618041.xyz_{vod_id}"
                 if category_id:
                     final_vod_id = f"618041.xyz_{category_id}_{vod_id}"
-            
-            # 提取标题
-            title_elem = element.xpath('.//p[@class="km-script"]/text()')
-            if not title_elem:
-                title_elem = element.xpath('.//p[contains(@class, "script")]/text()')
+                
+                # 提取加密的标题并解密
+                title_elem = element.xpath('.//p[@class="km-script"]/text()')
                 if not title_elem:
-                    title_elem = element.xpath('.//p/text()')
+                    title_elem = element.xpath('.//p[contains(@class, "script")]/text()')
                     if not title_elem:
-                        title_elem = element.xpath('.//h3/text()')
+                        title_elem = element.xpath('.//p/text()')
                         if not title_elem:
-                            title_elem = element.xpath('.//h4/text()')
+                            title_elem = element.xpath('.//h3/text()')
                             if not title_elem:
-                                self.log(f"未找到标题元素，跳过该视频")
-                                return None
-            
-            title_encrypted = title_elem[0].strip()
-            title = self._decrypt_title(title_encrypted)
-            
-            # 提取图片
-            pic_elem = element.xpath('.//img/@data-original')
-            if not pic_elem:
-                pic_elem = element.xpath('.//img/@src')
-            pic = pic_elem[0] if pic_elem else ''
-            
-            if pic:
-                if pic.startswith('//'):
-                    pic = 'https:' + pic
-                elif pic.startswith('/'):
-                    pic = self.host + pic
-            
-            return {
-                'vod_id': final_vod_id,
-                'vod_name': title,
-                'vod_pic': pic,
-                'vod_remarks': '',
-                'vod_year': ''
-            }
+                                title_elem = element.xpath('.//h4/text()')
+                                if not title_elem:
+                                    self.log(f"未找到标题元素，跳过该视频")
+                                    return None
+                
+                title_encrypted = title_elem[0].strip()
+                title = self._decrypt_title(title_encrypted)
+                
+                # 提取图片
+                pic_elem = element.xpath('.//img/@data-original')
+                if not pic_elem:
+                    pic_elem = element.xpath('.//img/@src')
+                pic = pic_elem[0] if pic_elem else ''
+                
+                if pic:
+                    if pic.startswith('//'):
+                        pic = 'https:' + pic
+                    elif pic.startswith('/'):
+                        pic = self.host + pic
+                
+                return {
+                    'vod_id': final_vod_id,
+                    'vod_name': title,
+                    'vod_pic': pic,
+                    'vod_remarks': '',
+                    'vod_year': ''
+                }
         except Exception as e:
             self.log(f"提取影片信息出错: {str(e)}")
             return None
 
     def _decrypt_title(self, encrypted_text):
-        """解密标题 - 使用网站的解密算法"""
+        """解密标题 - 使用网站的解密算法 (XOR 128)"""
         try:
             decrypted_chars = []
             for char in encrypted_text:
@@ -557,6 +602,8 @@ class Spider(Spider):
                 decrypted_chars.append(decrypted_char)
             
             decrypted_text = ''.join(decrypted_chars)
+            # 清理文本中的特殊字符
+            decrypted_text = decrypted_text.replace('&nbsp;', ' ')
             return decrypted_text
         except Exception as e:
             self.log(f"标题解密失败: {str(e)}")
@@ -580,7 +627,8 @@ class Spider(Spider):
             player_link_patterns = [
                 re.compile(r'href="(.*?ar\.html.*?)"'),
                 re.compile(r'href="(.*?kkyd\.html.*?)"'),
-                re.compile(r'href="(.*?ar-kk\.html.*?)"')
+                re.compile(r'href="(.*?ar-kk\.html.*?)"'),
+                re.compile(r'href="(.*?dcdc/.*?)"')
             ]
             
             player_links = []
