@@ -1405,6 +1405,21 @@
         "timeout": 120
     },
     {
+        "key": "py_红果短剧",
+        "name": "🅿️红果短剧｜py",
+        "type": 3,
+        "api": "./py/红果短剧.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "style": {
+            "type": "rect",
+            "ratio": 1.33
+        }
+    },
+    {
         "key": "啊哈DJ网",
         "name": "🎵啊哈┃DJ",
         "type": 3,

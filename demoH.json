@@ -1414,6 +1414,21 @@
         "timeout": 120
     },
     {
+        "key": "py_红果短剧",
+        "name": "🅿️红果短剧｜py",
+        "type": 3,
+        "api": "./py/红果短剧.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "style": {
+            "type": "rect",
+            "ratio": 1.33
+        }
+    },
+    {
         "key": "啊哈DJ网",
         "name": "🎵啊哈┃DJ",
         "type": 3,
@@ -1507,21 +1522,6 @@
         }
     },
     {
-        "key": "py_玩具社区",
-        "name": "🔞🅿️玩具社区｜py",
-        "type": 3,
-        "api": "./py/玩具社区.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "style": {
-            "type": "rect",
-            "ratio": 1.33
-        },
-        "timeout": 120
-    },
-    {
         "key": "py_香蕉视频",
         "name": "🔞🅿️香蕉视频｜py",
         "type": 3,
@@ -1535,6 +1535,36 @@
             "type": "rect",
             "ratio": 1.33
         }
+    },
+    {
+        "key": "py_黄色仓库",
+        "name": "🔞🅿️黄色仓库｜py",
+        "type": 3,
+        "api": "./py/黄色仓库.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "style": {
+            "type": "rect",
+            "ratio": 1.33
+        }
+    },
+    {
+        "key": "py_玩具社区",
+        "name": "🔞🅿️玩具社区｜py",
+        "type": 3,
+        "api": "./py/玩具社区.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "style": {
+            "type": "rect",
+            "ratio": 1.33
+        },
+        "timeout": 120
     },
     {
         "key": "py_菠萝七区",
@@ -1628,7 +1658,7 @@
     },
     {
         "key": "py_91短视频",
-        "name": "🔞🅿️91短视频（翻）｜py",
+        "name": "🔞🅿️91短视频｜py",
         "type": 3,
         "api": "./py/91.py",
         "searchable": 1,
