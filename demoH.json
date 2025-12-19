@@ -527,6 +527,80 @@
         "timeout": 120
     },
     {
+        "key": "py_飞快TV",
+        "name": "🅿️飞快TV｜py",
+        "type": 3,
+        "api": "./py/飞快TV.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "https://film.symx.club",
+        "name": "🅿️山有木兮｜py",
+        "type": 3,
+        "api": "./py/山有木兮.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "https://xdys.vip",
+        "name": "🅿️兄弟影视｜py",
+        "type": 3,
+        "api": "./py/兄弟影视.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "py_电影猎手",
+        "name": "🅿️电影猎手┃py",
+        "type": 3,
+        "api": "./py/电影猎手.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "py_红果短剧",
+        "name": "🅿️红果短剧｜py",
+        "type": 3,
+        "api": "./py/红果短剧.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "style": {
+            "type": "rect",
+            "ratio": 1.33
+        }
+    },
+    {
+        "key": "py_甜圈短剧",
+        "name": "🅿️甜圈短剧｜py",
+        "type": 3,
+        "api": "./py/甜圈短剧.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "style": {
+            "type": "rect",
+            "ratio": 1.33
+        }
+    },
+    {
         "key": "hipy_js_路漫漫",
         "name": "🔥路漫漫｜秒播",
         "type": 3,
@@ -1389,69 +1463,6 @@
             "线路标题": ">&&<",
             "分类url": "https://www.wuwuys.com/show/{cateId}-{area}-{by}------{catePg}---{year}.html;;ak",
             "分类": "动漫$4#电影$1#电视剧$2#综艺$3"
-        }
-    },
-    {
-        "key": "https://film.symx.club",
-        "name": "🅿️山有木兮｜py",
-        "type": 3,
-        "api": "./py/山有木兮.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
-        "key": "https://xdys.vip",
-        "name": "🅿️兄弟影视｜py",
-        "type": 3,
-        "api": "./py/兄弟影视.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
-        "key": "py_电影猎手",
-        "name": "🅿️电影猎手┃py",
-        "type": 3,
-        "api": "./py/电影猎手.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
-        "key": "py_红果短剧",
-        "name": "🅿️红果短剧｜py",
-        "type": 3,
-        "api": "./py/红果短剧.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120,
-        "style": {
-            "type": "rect",
-            "ratio": 1.33
-        }
-    },
-    {
-        "key": "py_甜圈短剧",
-        "name": "🅿️甜圈短剧｜py",
-        "type": 3,
-        "api": "./py/甜圈短剧.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120,
-        "style": {
-            "type": "rect",
-            "ratio": 1.33
         }
     },
     {
