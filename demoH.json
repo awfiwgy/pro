@@ -579,11 +579,7 @@
         "quickSearch": 1,
         "changeable": 1,
         "filterable": 1,
-        "timeout": 120,
-        "style": {
-            "type": "rect",
-            "ratio": 1.33
-        }
+        "timeout": 120
     },
     {
         "key": "py_甜圈短剧",
@@ -594,11 +590,20 @@
         "quickSearch": 1,
         "changeable": 1,
         "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "hipy_js_聚合短剧",
+        "name": "🔥聚合┃短剧",
+        "type": 3,
+        "api": "./js/聚合短剧.js",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
         "timeout": 120,
-        "style": {
-            "type": "rect",
-            "ratio": 1.33
-        }
+        "order_num": 0,
+        "ext": ""
     },
     {
         "key": "hipy_js_路漫漫",
