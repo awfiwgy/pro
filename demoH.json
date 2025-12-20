@@ -2145,66 +2145,6 @@
         }
     },
     {
-        "key": "py_Miss(T4)",
-        "name": "🔞MissAV(T4)",
-        "type": 4,
-        "api": "https://py.doube.eu.org/spider?site=Miss",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120,
-        "style": {
-            "type": "rect",
-            "ratio": 1.33
-        }
-    },
-    {
-        "key": "py_BadNews",
-        "name": "🔞BadNews(T4)",
-        "type": 4,
-        "api": "https://py.doube.eu.org/spider?site=BadNews",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120,
-        "style": {
-            "type": "rect",
-            "ratio": 1.33
-        }
-    },
-    {
-        "key": "py_AiDou",
-        "name": "🔞AiDou(T4)",
-        "type": 4,
-        "api": "https://py.doube.eu.org/spider?site=AiDou",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120,
-        "style": {
-            "type": "rect",
-            "ratio": 1.33
-        }
-    },
-    {
-        "key": "php_madou",
-        "name": "🔞麻豆(T4)",
-        "type": 4,
-        "api": "https://py.doube.eu.org/spider?site=MaDou",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120,
-        "style": {
-            "type": "rect",
-            "ratio": 1.33
-        }
-    },
-    {
         "key": "香奶儿",
         "name": "🔞香奶儿",
         "type": 0,
