@@ -13,7 +13,7 @@
         "name": "📡冰茶TV直播",
         "type": 0,
         "playerType": 2,
-        "url": "https://bc.188766.xyz/?ip=&mima=mianfeibuhuaqian&huikan=1&json=true",
+        "url": "https://bc.188766.xyz/?ip=&mima=bingcha1130&huikan=1&json=true",
         "ua": "bingcha/1.1(mianfeifenxiang)"
     },
     {
@@ -559,6 +559,50 @@
             "sites": "https://zhizhen.banye.tech:7138",
             "proxy": "noproxy"
         }
+    },
+    {
+        "key": "PY聚合",
+        "name": "❤️PY丨聚合",
+        "type": 4,
+        "api": "http://zhangqun1818.serv00.net/py.php",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "php聚合",
+        "name": "❤️PHP丨聚合",
+        "type": 4,
+        "api": "http://zhangqun1818.serv00.net/php.php",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "JS聚合",
+        "name": "❤️JS丨聚合",
+        "type": 4,
+        "api": "http://zhangqun1818.serv00.net/js.php",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "采集聚合",
+        "name": "❤️采集丨聚合",
+        "type": 4,
+        "api": "http://zhangqun1818.serv00.net/cj/cjjh.php",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
     },
     {
         "key": "py_路漫漫",
