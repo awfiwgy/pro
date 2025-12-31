@@ -593,7 +593,8 @@
         "quickSearch": 1,
         "changeable": 1,
         "filterable": 1,
-        "timeout": 120
+        "timeout": 120,
+        "ext": "0"
     },
     {
         "key": "py_路漫漫",
