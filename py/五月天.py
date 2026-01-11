@@ -77,26 +77,29 @@ class Spider(Spider):
     def playerContent(self,flag,id,vipFlags):
         return {'parse':0,'url':id,'header':{'User-Agent':self.headers['User-Agent']}}
     def localProxy(self,param):pass
-    def _parseVideoList(self,html):
-        videos=[]
+    def _parseVideoList(self, html):
+        videos = []
         try:
-            d=pq(html)
-            items=d('a[href^="/movie/detail/"]')
-            seen=set()
+            d = pq(html)
+            items = d('.listing_flex')
             for item in items.items():
-                href=item.attr('href')
-                if not href or href in seen:continue
-                title=item.attr('title') or item.find('span').text() or item.text()
-                img=item.find('img')
-                pic=img.attr('data-src') or img.attr('src') or ''
-                if not pic:
-                    style=img.attr('style')
-                    if style:
-                        m=re.search(r'url\((.*?)\)',style)
-                        if m:pic=m.group(1).strip('\'"')
-                remarks=item.find('.duration').text()
-                if title and href:
-                    seen.add(href)
-                    videos.append({'vod_id':href,'vod_name':title.strip(),'vod_pic':pic,'vod_remarks':remarks})
-        except:pass
+                a_tag = item.find('a.listing_a')
+                href = a_tag.attr('href')
+                if not href or '/movie/detail/' not in href: continue
+                
+                vid = href.split('/')[-1]
+                title = item.find('.video_title').text()
+                pic = ''
+                pic_match = re.search(f'"{vid}".*?"(https?://[^"]+)"', html)
+                if pic_match:
+                    pic = pic_match.group(1)
+                remarks = item.find('.absolute_bottom_right span').text()
+                
+                videos.append({
+                    'vod_id': href,
+                    'vod_name': title,
+                    'vod_pic': pic,
+                    'vod_remarks': remarks
+                })
+        except: pass
         return videos
