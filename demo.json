@@ -583,6 +583,17 @@
         "timeout": 120
     },
     {
+        "key": "py_界影视",
+        "name": "🅿️界影视｜py",
+        "type": 3,
+        "api": "./py/界影视.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
         "key": "py_小红影视",
         "name": "🅿️小红影视｜py",
         "type": 3,
