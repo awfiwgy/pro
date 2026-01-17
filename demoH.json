@@ -1672,6 +1672,17 @@
         "timeout": 120
     },
     {
+        "key": "py_911大事件",
+        "name": "🔞🅿️911大事件｜py",
+        "type": 3,
+        "api": "./py/911大事件.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
         "key": "py_黑料不打烊",
         "name": "🔞🅿️黑料不打烊｜py",
         "type": 3,
