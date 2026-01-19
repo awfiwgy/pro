@@ -64,6 +64,18 @@
         "changeable": 0
     },
     {
+        "key": "移动云盘",
+        "name": "😍免扫丨网盘",
+        "type": 3,
+        "api": "csp_PantaGuard",
+        "jar": "./jar/kulao.jpg",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 25
+    },
+    {
         "key": "csp_PanShareQuark",
         "name": "🆘夸克┃网盘",
         "type": 3,
@@ -288,6 +300,54 @@
         }
     },
     {
+        "key": "奇奇视频",
+        "name": "🚵奇奇｜APP",
+        "type": 3,
+        "api": "csp_AppGet",
+        "ext": {
+            "api": "2",
+            "host": "https://yun-1316442804.cos.ap-guangzhou.myqcloud.com/a.txt",
+            "datakey": "123456789abcdefg"
+        }
+    },
+    {
+        "key": "剧梦屋",
+        "name": "🙃剧梦｜APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://www.jumengwu.com",
+            "datakey": "1f0a873caf2550a5"
+        }
+    },
+    {
+        "key": "天峰影视",
+        "name": "⛰️天峰┃APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "http://zxy-ys.810211.dpdns.org",
+            "datakey": "1234567890123456"
+        }
+    },
+    {
+        "key": "HG影视",
+        "name": "🌺HG┃APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://ios.hgyx.vip",
+            "datakey": "062dec75d039980e",
+            "ua": "Dart/3.5 (dart:io)"
+        }
+    },
+    {
         "key": "mifun",
         "name": "🐸mifun｜APP",
         "type": 3,
@@ -326,6 +386,16 @@
         }
     },
     {
+        "key": "魔方4K",
+        "name": "🎲魔方┃APP",
+        "type": 3,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://snysw.xyz/mf4kzs327.txt",
+            "datakey": "1234567887654321"
+        }
+    },
+    {
         "key": "云云",
         "name": "☁️云云┃APP",
         "type": 3,
@@ -336,6 +406,69 @@
             "host": "https://staraugust123456.oss-cn-hangzhou.aliyuncs.com/2.txt",
             "datakey": "staraugust123456",
             "api": 2
+        }
+    },
+    {
+        "key": "影视",
+        "name": "😡影视┃APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://jingyu4k-1312635929.cos.ap-nanjing.myqcloud.com/1.json",
+            "datakey": "AAdgrdghjfgswerA",
+            "api": 2
+        }
+    },
+    {
+        "key": "次元方舟",
+        "name": "🛸方舟┃APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://www.cyfz.vip",
+            "datakey": "e72cdfd629e8895d"
+        }
+    },
+    {
+        "key": "番薯动漫",
+        "name": "🌳番薯┃APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://new.app.bytegooty.com",
+            "datakey": "N4yj7l7xKxHF4*gz"
+        }
+    },
+    {
+        "key": "花小猪",
+        "name": "🐷小猪┃APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://tiantangyoulu.oss-cn-beijing.aliyuncs.com/tengxunyun.txt",
+            "ua": "okhttp/3.10.0",
+            "datakey": "seb5tq9mykp2w9ry",
+            "api": 2
+        }
+    },
+    {
+        "key": "八天",
+        "name": "🏂八天┃APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://dy.8ttv.cn/",
+            "datakey": "1111111111111111"
         }
     },
     {
@@ -2297,26 +2430,6 @@
     }
 ],
 "doh": [
-    {
-        "name": "DNSPod",
-        "url": "https://doh.pub/dns-query",
-        "ips": [
-            "119.29.29.29",
-            "119.28.28.28",
-            "2400:da00::6666",
-            "2400:da00:1::6666"
-        ]
-    },
-    {
-        "name": "Alidns",
-        "url": "https://dns.alidns.com/dns-query",
-        "ips": [
-            "223.5.5.5",
-            "223.6.6.6",
-            "2400:3200::1",
-            "2400:3200:baba::1"
-        ]
-    },
     {
         "name": "Google",
         "url": "https://dns.google/dns-query",
