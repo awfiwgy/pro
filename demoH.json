@@ -1667,6 +1667,17 @@
         "timeout": 120
     },
     {
+        "key": "py_禁片天堂",
+        "name": "🔞🅿️禁片天堂｜py",
+        "type": 3,
+        "api": "./py/禁片天堂.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
         "key": "py_911大事件",
         "name": "🔞🅿️911大事件｜py",
         "type": 3,
