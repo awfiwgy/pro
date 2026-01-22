@@ -83,10 +83,15 @@ async function init(cfg) {}
 
 async function home(filter) {
     const classes = [
-        { type_id: '2', type_name: '连续剧' },
+        { type_id: '20', type_name: '港剧' },
+        { type_id: '13', type_name: '陆剧' },
+        { type_id: '4', type_name: '动漫' },
+        { type_id: '21', type_name: '短剧' },
         { type_id: '1', type_name: '电影' },
-        { type_id: '3', type_name: '综艺' },
-        { type_id: '4', type_name: '动漫' }
+        { type_id: '2', type_name: '连续剧' },
+        { type_id: '15', type_name: '日韩剧' },
+        { type_id: '14', type_name: '台泰剧' },
+        { type_id: '3', type_name: '综艺' }
     ];
     return JSON.stringify({ class: classes });
 }
