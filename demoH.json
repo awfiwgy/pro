@@ -242,14 +242,6 @@
         }
     },
     {
-        "key": "csp_YHDM",
-        "name": "😍樱花┃动漫",
-        "type": 3,
-        "api": "csp_YHDM",
-        "searchable": 1,
-        "changeable": 1
-    },
-    {
         "key": "csp_Guazi",
         "name": "😳瓜子┃优质",
         "type": 3,
