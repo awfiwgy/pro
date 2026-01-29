@@ -250,6 +250,63 @@
         "changeable": 1
     },
     {
+        "key": "金牌影院",
+        "name": "🥇金牌┃APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://dtqj.ggtvb.cc/dtjp.txt",
+            "datakey": "eecbio48dsq131ee",
+            "api": "2"
+        }
+    },
+    {
+        "key": "mifun",
+        "name": "🐸mifun｜APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://miget-1313189639.cos.ap-guangzhou.myqcloud.com/mifun.txt",
+            "datakey": "GETMIFUNGEIMIFUN"
+        }
+    },
+    {
+        "key": "番薯动漫",
+        "name": "🌳番薯┃APP",
+        "type": 3,
+        "searchable": 1,
+        "changeable": 1,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://new.app.bytegooty.com",
+            "datakey": "N4yj7l7xKxHF4*gz"
+        }
+    },
+    {
+        "key": "魔方4K",
+        "name": "🎲魔方┃APP",
+        "type": 3,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://snysw.xyz/mf4kzs327.txt",
+            "datakey": "1234567887654321"
+        }
+    },
+    {
+        "key": "王子4K",
+        "name": "🙆王子┃APP",
+        "type": 3,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://app.95112475.xyz",
+            "datakey": "5a9w6x58dsq6z3a6"
+        }
+    },
+    {
         "key": "csp_Kan90",
         "name": "😇最全┃短剧",
         "type": 3,
