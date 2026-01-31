@@ -62,19 +62,30 @@
         "changeable": 0
     },
     {
-        "key": "移动云盘",
+        "key": "木偶免扫",
+        "name": "😍木偶丨免扫码",
+        "type": 3,
+        "api": "csp_HBNT4",
+        "jar": "http://103.45.162.207:25252/仅供测试/custom_spider.jar;md5;f2cf5b9cb97c1e00d893511777c3abe1",
+        "ext": "DyoqWQIrBwMuGytIIxtMWy8FMQwtNStECyoUXy0YVUg="
+    },
+    {
+        "key": "移动免扫",
         "name": "😍移动丨免扫码",
         "type": 3,
-        "api": "csp_PantaGuard",
-        "jar": "./jar/kulao.jpg",
+        "api": "csp_AweSomeGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2026/01/23/aabe9ebea7695ee766e0bf503b218dcc.jpg;md5;f2973db01b3ac8dd9d9cd931e384935e",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
         "filterable": 1,
-        "timeout": 25
+        "timeout": 25,
+        "ext": {
+            "sp": "Panta"
+        }
     },
     {
-        "key": "多多网盘",
+        "key": "多多免扫",
         "name": "😍多多丨免扫码",
         "type": 3,
         "api": "csp_HBNT4",
@@ -82,7 +93,7 @@
         "ext": "DyoqWQInJUMuGFcBCgtNXAQ4Og8HOSNECiVBHi0YVUg="
     },
     {
-        "key": "臻彩网盘",
+        "key": "臻彩免扫",
         "name": "😍臻彩丨免扫码",
         "type": 3,
         "api": "csp_HBNT4",
@@ -1362,6 +1373,17 @@
             "分类url": "https://www.wuwuys.com/show/{cateId}-{area}-{by}------{catePg}---{year}.html;;ak",
             "分类": "动漫$4#电影$1#电视剧$2#综艺$3"
         }
+    },
+    {
+        "name": "KTV音乐",
+        "key": "🎤KTV丨音乐",
+        "type": 3,
+        "api": "csp_KuGouAmns",
+        "jar": "http://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/bfdb--cvdvds.png",
+        "searchable": 1,
+        "filterable": 1,
+        "quickSearch": 1,
+        "changeable": 0
     },
     {
         "key": "哔哩音乐",
