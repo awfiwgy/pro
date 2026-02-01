@@ -8,7 +8,13 @@
         "name": "📡自动更新",
         "type": 0,
         "playerType": 2,
-        "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
+        "url": "https://down.nigx.cn/raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
+    },
+    {
+        "name": "📡裤佬直播",
+        "type": 0,
+        "playerType": 2,
+        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1"
     },
     {
         "name": "📡GTV研究所",
@@ -23,12 +29,6 @@
         "url": "https://bc.188766.xyz/?url=https://live.188766.xyz&mima=bingcha1130"
     },
     {
-        "name": "📡裤佬直播",
-        "type": 0,
-        "playerType": 2,
-        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1"
-    },
-    {
         "name": "📡STREAM",
         "type": 0,
         "playerType": 2,
@@ -36,10 +36,14 @@
     },
     {
         "name": "📡中国大陆",
+        "type": 0,
+        "playerType": 2,
         "url": "https://t.freetv.fun/m3u/playlist.txt"
     },
     {
         "name": "📡体育直播",
+        "type": 0,
+        "playerType": 2,
         "url": "https://t.freetv.fun/m3u/sports.txt"
     }
 ],
