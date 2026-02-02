@@ -360,7 +360,7 @@
         "playerType": 2,
         "ext": {
             "json": "./json/bili.json",
-            "cookie": ""
+            "cookie": "SESSDATA=a0856a49%2C1778072164%2C67863%2Ab2CjBMWddMQeEOEER1cURy-uqSbEnqHfBVbdCtQ-VC_5LsbZ7PtWoNlLhyPF0kGPucJ5wSVmVlRU40Q25paDF6azZSOVd6aHlPMzRmdTdqblhzVmctNzBySXFydm9mMUhYcU0zQktWU2toVWlwVjF4SnRIYUE0d0pVX3NCdTNLMzEyWml4QzBiRC1RIIEC; bili_jct=239a0b314be4667a13d90f803952dace; DedeUserID=9628400; DedeUserID__ckMd5=196cad8ada71a3a6; sid=4vee908l; browser_resolution=1280-2389; CURRENT_FNVAL=16; b_lsid=42875CAB_19AB50AEF4C; bili_ticket=eyJhbGciOiJIUzI1NiIsImtpZCI6InMwMyIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjQyMzMxODcsImlhdCI6MTc2Mzk3MzkyNywicGx0IjotMX0.16TeGLfze2FI9GOA5BujTsvEElARMxHEne3EQdkjAv4; bili_ticket_expires=1764233127"
         },
         "style": {
             "type": "rect",
