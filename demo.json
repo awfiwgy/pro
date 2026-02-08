@@ -138,6 +138,20 @@
         "timeout": 60
     },
     {
+        "key": "csp_GuanYing",
+        "name": "😂观影┃4K",
+        "type": 3,
+        "api": "csp_GuanYing",
+        "searchable": 1,
+        "changeable": 1,
+        "timeout": 60,
+        "ext": {
+            "cookie": "PHPSESSID=l34r7bt47f9h8bmtg9imgvqd9o; BT_auth=7c1dWqZO8XUPMtjXZdbXVnXckx7Dexh3sDJEtTQDVdeDM07PPUc6hVtyz-OReKn59gl_7USdMIJ2URV5N5K-H_gJVv7fdXwOrwxMo_Ggr5ADmtCbzXWYWruxzKOqwTMcuNIjDDhLtkdpHBwrb5YOLTC1fgMXOf3s0kvY3mg90QTy; BT_cookietime=a5690ptoZzKg5ECtEFmRvc9JQbigpfOaJB24wPnNas5Qg8kqJDJq",
+            "filters": "./json/guanying.json",
+            "sites": "https://www.gyg.la,https://www.gyg.si,https://www.gying.net,https://www.gying.org,https://www.gying.si,https://www.gying.in"
+        }
+    },
+    {
         "key": "csp_SeedHub",
         "name": "🎳Seed┃Hub",
         "type": 3,
