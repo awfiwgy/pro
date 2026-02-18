@@ -5,16 +5,22 @@
 "wallpaper": "http://饭太硬.top/深色壁纸/api.php",
 "lives": [
     {
+        "name": "📡南风直播",
+        "type": 0,
+        "playerType": 2,
+        "url": "https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/live.txt"
+    },
+    {
         "name": "📡自动更新",
         "type": 0,
         "playerType": 2,
-        "url": "https://down.nigx.cn/raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
+        "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
     },
     {
         "name": "📡裤佬直播",
         "type": 0,
         "playerType": 2,
-        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1.m3u"
+        "url": "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1.m3u"
     },
     {
         "name": "📡GTV研究所",
@@ -121,15 +127,6 @@
         "ext": {
             "class": "./json/ucshare.txt"
         }
-    },
-    {
-        "key": "csp_PanSou",
-        "name": "🥺盘搜┃搜索",
-        "type": 3,
-        "api": "csp_PanSou",
-        "searchable": 1,
-        "changeable": 1,
-        "timeout": 60
     },
     {
         "key": "csp_GuanYing",
@@ -432,17 +429,6 @@
         "ext": "0"
     },
     {
-        "key": "腾讯影视",
-        "name": "❤️腾讯丨影视",
-        "type": 4,
-        "api": "https://learnpython.ggff.net/TXSPPY",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
         "key": "路漫漫JS",
         "name": "❤️路漫漫丨JS",
         "type": 3,
@@ -728,6 +714,69 @@
         "ext": "https://m.hellosht52bwb.com,https://m.jiabaide.cn,https://m.y2s52n7.com,https://m.hkybqufgh.com,https://m.sizhengxt.com,https://m.9zhoukj.com"
     },
     {
+        "key": "瓜子APP",
+        "name": "👖瓜子丨影视",
+        "type": 3,
+        "api": "csp_AweSomeGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2026/01/26/0e8629c873fea38d04bc58cbeb28c3c5.jpg;md5;127ea82cb8bf8a82f0cf64da66e39b60",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": {
+            "sp": "Guazi",
+            "danmu": true
+        },
+        "timeout": 10
+    },
+    {
+        "key": "厂长影视",
+        "name": "👖厂长丨影视",
+        "type": 3,
+        "api": "csp_AweSomeGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2026/01/26/0e8629c873fea38d04bc58cbeb28c3c5.jpg;md5;127ea82cb8bf8a82f0cf64da66e39b60",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 0,
+        "filterable": 1,
+        "ext": {
+            "sp": "Czzy",
+            "danmu": true
+        },
+        "timeout": 10
+    },
+    {
+        "key": "糯米影视",
+        "name": "👖糯米丨影视",
+        "type": 3,
+        "api": "csp_AweSomeGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2026/01/26/0e8629c873fea38d04bc58cbeb28c3c5.jpg;md5;127ea82cb8bf8a82f0cf64da66e39b60",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "ext": {
+            "sp": "Nmys",
+            "danmu": true
+        },
+        "timeout": 10
+    },
+    {
+        "key": "比特影视",
+        "name": "👖比特丨影视",
+        "type": 3,
+        "api": "csp_AweSomeGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2026/01/26/0e8629c873fea38d04bc58cbeb28c3c5.jpg;md5;127ea82cb8bf8a82f0cf64da66e39b60",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "ext": {
+            "sp": "Btt",
+            "danmu": true
+        },
+        "timeout": 10
+    },
+    {
         "key": "飘零影院",
         "name": "🐱飘零丨多线",
         "type": 1,
@@ -765,7 +814,7 @@
         "name": "💕独播库丨秒播",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -787,7 +836,7 @@
         "name": "💕飞快TV┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -845,7 +894,7 @@
         "name": "💕4k影视｜多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -858,7 +907,7 @@
         "name": "💕4k影院｜多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -871,7 +920,7 @@
         "name": "💕麦田影视｜多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -892,7 +941,7 @@
         "name": "💕4K动漫丨多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -914,7 +963,7 @@
         "name": "💕漫岛动漫┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -933,7 +982,7 @@
         "name": "💕奇优影院┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -949,7 +998,7 @@
         "name": "💕西瓜影院丨多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -970,7 +1019,7 @@
         "name": "💕酷酷影视丨多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "ext": {
             "请求头": "手机",
             "免嗅探": "开",
@@ -985,7 +1034,7 @@
         "name": "💕红果短剧┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1002,7 +1051,7 @@
         "name": "💕永乐视频┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1019,7 +1068,7 @@
         "name": "💕即看影视┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1040,7 +1089,7 @@
         "name": "💕58动漫┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1061,7 +1110,7 @@
         "name": "💕嘀嗒影视┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1082,7 +1131,7 @@
         "name": "💕红果果短剧丨多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1104,7 +1153,7 @@
         "name": "💕短剧网┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1125,7 +1174,7 @@
         "name": "💕星星影视┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1145,7 +1194,7 @@
         "name": "💕星辰影院┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1166,7 +1215,7 @@
         "name": "💕星云影院┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1186,7 +1235,7 @@
         "name": "💕魔方影视┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1205,7 +1254,7 @@
         "name": "💕北川影视┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1224,7 +1273,7 @@
         "name": "💕番茄影视┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1246,7 +1295,7 @@
         "name": "💕耐看点播丨多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1273,7 +1322,7 @@
         "name": "💕CG影院｜多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "ext": {
             "分类数组": "<li class=\"col-md-2 col-sm-3 col-xs-4\">&&</div></li>",
             "链接": "href=\"&&\"",
@@ -1289,7 +1338,7 @@
         "name": "💕电影┃先生",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1319,7 +1368,7 @@
         "name": "💕丽宫影视┃多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1339,7 +1388,7 @@
         "name": "💕GimyTV丨多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1369,7 +1418,7 @@
         "name": "💕五五影视丨多线",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1388,47 +1437,79 @@
     },
     {
         "key": "酷狗音乐",
-        "name": "🎤酷狗丨音乐",
+        "name": "🎶酷狗丨音乐",
         "type": 3,
-        "api": "csp_KuGouAmns",
-        "jar": "http://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/bfdb--cvdvds.png",
+        "api": "csp_AweSomeGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2026/01/26/0e8629c873fea38d04bc58cbeb28c3c5.jpg;md5;127ea82cb8bf8a82f0cf64da66e39b60",
         "searchable": 1,
-        "filterable": 1,
-        "quickSearch": 1,
-        "changeable": 0
+        "quickSearch": 0,
+        "changeable": 0,
+        "ext": {
+            "sp": "KuGou"
+        },
+        "timeout": 10
     },
     {
         "key": "哔哩音乐",
-        "name": "🎵哔哩丨音乐",
+        "name": "🎶哔哩丨音乐",
         "type": 4,
-        "api": "https://catbox.n13.club/t9/bili.php?id=bMTV",
+        "api": "https://catbox.n13.club/t9/bili.php?id=bMTV"
+    },
+    {
+        "key": "易听音乐",
+        "name": "🎶易听丨音乐",
+        "type": 3,
+        "api": "csp_AweSomeGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2026/01/26/0e8629c873fea38d04bc58cbeb28c3c5.jpg;md5;127ea82cb8bf8a82f0cf64da66e39b60",
+        "searchable": 0,
+        "quickSearch": 0,
+        "changeable": 0,
+        "ext": {
+            "sp": "ShiJiMusic"
+        },
+        "timeout": 10
+    },
+    {
+        "key": "爱听音乐",
+        "name": "🎶爱听丨音乐",
+        "type": 3,
+        "api": "https://mpimg.cn/down.php/b3284feb00815ddd5d7e71e1468d9cf1.py",
+        "searchable": 1,
+        "changeable": 1,
+        "quickSearch": 1,
+        "filterable": 1
+    },
+    {
+        "key": "枫叶音乐",
+        "name": "🎶枫叶丨音乐",
+        "type": 3,
+        "api": "https://mpimg.cn/down.php/2090fedb67387ea1a1ad908a94eb0aa6.py",
+        "searchable": 1,
+        "changeable": 1,
+        "quickSearch": 1,
+        "filterable": 1
+    },
+    {
+        "key": "初心音乐",
+        "name": "🎶初心丨音乐",
+        "type": 3,
+        "api": "csp_ChuXin",
+        "jar": "https://tc-new.z.wiki/autoupload/iYHTWVx6T8RrCmqdGD6MOdiO_OyvX7mIgxFBfDMDErs/20260208/N0Ef/fish02082044.png;md5;d8228443223daf404ca5621da8c41436",
         "searchable": 1,
         "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
+        "filterable": 0
     },
     {
         "key": "啊哈DJ",
-        "name": "🎵啊哈丨DJ",
+        "name": "🎶啊哈丨DJ",
         "type": 4,
-        "api": "https://catbox.n13.club/t9/aha.php",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
+        "api": "https://catbox.n13.club/t9/aha.php"
     },
     {
         "key": "悠悠DJ",
-        "name": "🎵悠悠丨DJ",
+        "name": "🎶悠悠丨DJ",
         "type": 4,
-        "api": "https://catbox.n13.club/t9/djuu.php",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
+        "api": "https://catbox.n13.club/t9/djuu.php"
     },
     {
         "key": "py_深港DJ",
@@ -1446,7 +1527,7 @@
         "name": "🎶闪闪｜音乐",
         "type": 3,
         "api": "csp_XBPQ",
-        "jar": "./jar/xbpq.jar",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
